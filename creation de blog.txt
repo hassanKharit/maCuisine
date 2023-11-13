@@ -1,0 +1,65 @@
+crée un site! un plan!
+
+1-Créer son projet
+symfony new (nom du projet) --full --version=5.4
+
+
+
+ 
+2-créer sa base de données
+
+DATABASE_URL="mysql://root:@127.0.0.1:3306/recettes?serverVersion=8&charset=utf8mb4"
+symfony console doctrine:database:create
+- php bin/console doctrine:database:create
+
+- php bin/console make:user
+- php bin/console make:entity
+
+
+-Ingrdient : 
+- Comment : content/text/createdAt
+- User : photos/
+- Article : name/
+- Category : name/
+
+User (Utilisateur) :
+Un utilisateur peut être lié à plusieurs commentaires, recettes (en tant qu'auteur), articles (en tant qu'auteur).
+Chaque commentaire, recette et article peut avoir un seul utilisateur en tant qu'auteur.
+
+Comment (Commentaire) :
+Un commentaire est associé à un utilisateur qui l'a écrit.
+Un commentaire est lié à une recette sur laquelle il a été posté.
+
+Recipe (Recette) :
+Une recette est associée à un utilisateur qui l'a créée (en tant qu'auteur).
+Une recette peut avoir plusieurs commentaires associés.
+Une recette peut être associée à plusieurs ingrédients.
+Une recette peut avoir plusieurs tags.
+
+Ingredient (Ingrédient) :
+Un ingrédient peut être utilisé dans plusieurs recettes.
+
+Article :
+Un article est associé à un utilisateur qui l'a créé (en tant qu'auteur).
+Un article peut avoir plusieurs commentaires associés.
+Un article peut être associé à plusieurs tags.
+
+Category (Catégorie) :
+Une catégorie peut avoir plusieurs recettes associées.
+Un article peut être associé à une seule catégorie.
+
+
+3-Créer les pages utilisateurs
+
+
+
+4-crées l'espace admin
+
+
+
+5-Créer les pages visiteurs
+
+
+
+6-Ajouter Bootstrap
+
